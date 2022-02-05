@@ -1,0 +1,57 @@
+6- sudo docker run --rm -p 8787:8787 -e PASSWORD=nene 5e5d504d299b
+
+2- docker ps
+
+3- docker run -d container_id  ////////  d -> detach (lanzarlo en segundo plano)
+
+4- docker save rocker/verse > rstudio_container.tar
+
+5- docker load -- input /home/dazaca/Containers/rstudio_container.tar
+
+6- sudo docker run --rm -p 8787:8787 -e PASSWORD=nene 5e5d504d299b
+
+
+/// -> to view all containers (running/stopped): --- > docker container ls -a
+/// -> to close all running containers: ------------ > docker kill $(docker ps -q)
+/// -> to remove all exited containers: ------------ > docker rm $(docker ps --filter status=exited -q)
+					------------ > docker ps --filter status=exited -q | xargs docker rm
+
+
+
+7- http://localhost:8787
+
+8- sudo docker stop c1a1803a7aa22 -------->  docker rm c1a1803a7aa22 
+
+9- sudo docker rmi ff47c56c9c0b
+
+10- sudo docker login --username=dazaca ----------------> sudo docker logout
+
+11- sudo docker commit -m "Initial unmodified RStudio Server image based on rocker/verse:latest-daily the 20220204." c1a1803a7aa2 dazaca/rstudio:1_initial
+
+❯ sudo docker images
+REPOSITORY           TAG            IMAGE ID       CREATED          SIZE
+dazaca/rstudio       1_initial      9537c15e4354   55 minutes ago   4.08GB
+rocker/verse         latest-daily   5e5d504d299b   5 days ago       4.08GB
+rocker/shiny-verse   latest         c9925cd2058e   6 days ago       2.19GB
+
+
+# NOT APPLIED -> 12- sudo docker tag 573d9433ed0a dazaca/rstudio:1_fresh_new
+
+13- sudo docker push dazaca/rstudio:1_initial
+
+The push refers to repository [docker.io/dazaca/rstudio]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
