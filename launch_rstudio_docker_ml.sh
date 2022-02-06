@@ -37,7 +37,10 @@ cat ~/Containers/2_docker_hub_pw.txt | sudo docker login --username dazaca --pas
 #sudo docker run -d -p 8787:8787 -e PASSWORD=toto 8ae0c09f87a2
 #sudo docker run -d -e PASSWORD=toto -p 8787:8787 rocker/ml
 #sudo docker run -d -p 8787:8787 -e PASSWORD=toto 96bf9452de2a 
-sudo docker run -d -p 8787:8787 -e PASSWORD=toto rocker/ml-verse 
+#sudo docker run -d -p 8787:8787 -e PASSWORD=toto rocker/ml-verse:latest 
+sudo docker run -d -p 8787:8787 -e PASSWORD=toto dazaca/rstudio:2_keras_tensorflow 
+
+
 
 sleep 1
 firejail /usr/lib/firefox/firefox http://localhost:8787/

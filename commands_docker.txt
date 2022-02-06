@@ -44,7 +44,7 @@ rocker/shiny-verse   latest         c9925cd2058e   6 days ago       2.19GB
 
 
 11.1- sudo docker commit -m "Initial unmodified RStudio Server image based on rocker/ml-verse:latest the 20220206." 
-230eb54e4b4b dazaca/rstudio:1_initial_ml
+16f52cbe903b dazaca/rstudio:1_initial_ml
 
 # NOT APPLIED -> 12- sudo docker tag 573d9433ed0a dazaca/rstudio:1_fresh_new
 
