@@ -34,6 +34,8 @@ du -sh ./*
 
 11- sudo docker commit -m "Initial unmodified RStudio Server image based on rocker/verse:latest-daily the 20220204." c1a1803a7aa2 dazaca/rstudio:1_initial
 
+# NOTE: c1a1803a7aa2 is the ID of the container created from the "rocker/verse:latest-daily" image.
+
 ❯ sudo docker images
 REPOSITORY           TAG            IMAGE ID       CREATED          SIZE
 dazaca/rstudio       1_initial      9537c15e4354   55 minutes ago   4.08GB
@@ -41,9 +43,14 @@ rocker/verse         latest-daily   5e5d504d299b   5 days ago       4.08GB
 rocker/shiny-verse   latest         c9925cd2058e   6 days ago       2.19GB
 
 
+11.1- sudo docker commit -m "Initial unmodified RStudio Server image based on rocker/ml-verse:latest the 20220206." 
+230eb54e4b4b dazaca/rstudio:1_initial_ml
+
 # NOT APPLIED -> 12- sudo docker tag 573d9433ed0a dazaca/rstudio:1_fresh_new
 
 13- sudo docker push dazaca/rstudio:1_initial
+13.1- sudo docker push dazaca/rstudio:1_initial_ml
+
 
 The push refers to repository [docker.io/dazaca/rstudio]
 
